@@ -4,15 +4,17 @@ namespace Codebykyle\CalculatedField;
 
 use Laravel\Nova\Element;
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\Select;
 
-class BroadcasterField extends Field
+class BroadcasterSelectField extends Select
 {
+
     /**
      * The field's component.
      *
      * @var string
      */
-    public $component = 'broadcaster-field';
+    public $component = 'broadcaster-select-field';
 
     /**
      * The type of the field to show on the form
