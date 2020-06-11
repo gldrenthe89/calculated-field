@@ -308,14 +308,10 @@
                 const rawValue = this.selectedResource.value;
                 let parsedValue = rawValue;
 
-                this.field.broadcastTo.forEach((itemKey, i) => {
-                    setTimeout(() =>
-                            Nova.$emit(itemKey, {
-                                'field_name': itemKey,
-                                'value': parsedValue
-                            }),
-                        i * 1000);
-                })
+                Nova.$emit(this.field.broadcastTo, {
+                    'field_name': this.field.attribute,
+                    'value': parsedValue
+                }),
 
                 this.selectedResource.value = parsedValue;
             },

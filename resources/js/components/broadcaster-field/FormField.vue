@@ -31,14 +31,10 @@ export default {
                 parsedValue = Number(rawValue)
             }
 
-            this.field.broadcastTo.forEach((itemKey, i) => {
-                setTimeout(() =>
-                        Nova.$emit(itemKey, {
-                            'field_name': itemKey,
-                            'value': parsedValue
-                        }),
-                    i * 1000);
-            })
+            Nova.$emit(this.field.broadcastTo, {
+                'field_name': this.field.attribute,
+                'value': parsedValue
+            }),
 
             this.value = parsedValue;
         },

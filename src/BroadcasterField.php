@@ -58,7 +58,7 @@ class BroadcasterField extends Field
     public function broadcastTo($broadcastChannel) : Element
     {
         return $this->withMeta([
-            'broadcastTo' => is_array($broadcastChannel) ? $broadcastChannel : array($broadcastChannel)
+            'broadcastTo' => $broadcastChannel
         ]);
     }
 }

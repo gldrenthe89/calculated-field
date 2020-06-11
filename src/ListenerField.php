@@ -45,7 +45,7 @@ class ListenerField extends Field
 
     /**
      * The channel that the client side component listens to
-     * @param $channel
+     * @param string|array $channel
      * @return $this
      */
     public function listensTo($channel) {
