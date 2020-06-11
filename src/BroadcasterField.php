@@ -52,13 +52,13 @@ class BroadcasterField extends Field
 
     /**
      * Tells the client side component which channel to broadcast on
-     * @param $broadcastChannel
+     * @param array|string $broadcastChannel
      * @return Element
      */
     public function broadcastTo($broadcastChannel) : Element
     {
         return $this->withMeta([
-            'broadcastTo' => $broadcastChannel
+            'broadcastTo' => is_array($broadcastChannel) ? $broadcastChannel : array($broadcastChannel)
         ]);
     }
 }

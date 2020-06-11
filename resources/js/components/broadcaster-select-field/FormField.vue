@@ -1,19 +1,4 @@
 <template>
-    <!--
-    <default-field :field="field" :errors="errors">
-        <template slot="field">
-            <input
-                :id="field.name"
-                :type="this.field.type"
-                class="w-full form-control form-input form-input-bordered"
-                :class="errorClasses"
-                :placeholder="field.name"
-                :value="value"
-                @input="setFieldAndMessage"
-            />
-        </template>
-    </default-field>
-    -->
     <default-field :field="field" :errors="errors">
         <template slot="field">
             <select-control
@@ -53,10 +38,14 @@ export default {
                 parsedValue = Number(rawValue)
             }
 
-            Nova.$emit(this.field.broadcastTo, {
-                'field_name': this.field.attribute,
-                'value': parsedValue
-            });
+            this.field.broadcastTo.forEach((itemKey, i) => {
+                setTimeout(() =>
+                        Nova.$emit(itemKey, {
+                            'field_name': itemKey,
+                            'value': parsedValue
+                        }),
+                    i * 1000);
+            })
 
             this.value = parsedValue;
         },
