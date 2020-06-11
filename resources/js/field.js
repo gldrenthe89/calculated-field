@@ -14,4 +14,8 @@ Nova.booting((Vue, router, store) => {
     Vue.component('index-listener-field', require('./components/listener-field/IndexField'));
     Vue.component('detail-listener-field', require('./components/listener-field/DetailField'));
     Vue.component('form-listener-field', require('./components/listener-field/FormField'));
+
+    Vue.component('index-listener-currency-field', require('./components/listener-currency-field/IndexField'));
+    Vue.component('detail-listener-currency-field', require('./components/listener-currency-field/DetailField'));
+    Vue.component('form-listener-currency-field', require('./components/listener-currency-field/FormField'));
 })
