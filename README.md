@@ -152,6 +152,3 @@ class MyResource extends Resource
     }
 }
 ```
-
-
-[]: https://github.com/sabid/calculated-field]Sabid
