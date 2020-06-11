@@ -1,3 +1,12 @@
+# **Package has been forken**
+- Added select-field from a fork from: [Sabid](https://github.com/sabid/calculated-field)
+- Added a belongsTo broadcast field
+- Added a currency listener field
+- Created the ability to cast to multiple listener fields. every additional field gets a additional delay of 1000ms to pick up the broadcast.
+- There is now always the need to specify ->broadcastTo() and ->listensTo()
+
+original readme below. (not up to date with current changes)
+
 # A Server-Side Calculated Field For Laravel Nova
 
 This package contains two Nova fields required to do server-side calculations from the Nova client. 
@@ -143,3 +152,6 @@ class MyResource extends Resource
     }
 }
 ```
+
+
+[]: https://github.com/sabid/calculated-field]Sabid
