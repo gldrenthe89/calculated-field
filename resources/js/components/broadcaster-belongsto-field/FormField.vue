@@ -305,7 +305,6 @@
             // added
             setFieldAndMessage(el) {
                 // const rawValue = el.target.value;
-                console.log('hit');
                 const rawValue = this.selectedResource.value;
                 let parsedValue = rawValue;
 
